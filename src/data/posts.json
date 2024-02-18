@@ -1,0 +1,16 @@
+{
+    "posts":[
+        {
+            "id":  "next.js14-blog",
+            "title": "Next.js14で小さなブログを作る",
+            "content": "udemyの教材を参考に作ってみた",
+            "createdAt": "2024/02/18"
+        },
+        {
+            "id":  "json-server",
+            "title": "Next.js14で小さなブログを作る",
+            "content": "jsonserverは簡易的なサーバー",
+            "createdAt": "2024/02/11"
+        }
+    ]
+}
