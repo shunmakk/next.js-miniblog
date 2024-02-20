@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "./Header";
 import Footer from "./Footer";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 
 
@@ -19,7 +21,9 @@ export default function RootLayout({
     <html lang="ja">
       <body className="container  mx-auto">
        <Header/>
+       <Suspense fallback={<Loading/>}>
         {children}
+        </Suspense>
         <Footer/>
       </body>
     </html>
