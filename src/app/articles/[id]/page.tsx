@@ -1,10 +1,13 @@
 import React from 'react'
 import Image from 'next/image';
 import { getDeTailArticles } from '@/blogAPI ';
+import DeleteButton from '@/app/components/DeleteButton';
 
 const Article =  async   ({params}:{params: {id: string}}) => {
 
  const detailArticle = await  getDeTailArticles(params.id);
+
+ 
 
   
   return (
@@ -13,6 +16,9 @@ const Article =  async   ({params}:{params: {id: string}}) => {
       <h1 className='text-4xl text-center mb-10 mt-10'>{detailArticle.title}</h1>
       <div className='text-lg leading-relaxed text-justify'>
         <p>{detailArticle.content}</p>
+        <div className='text-right mt-3'>
+          <DeleteButton id={detailArticle.id}/>
+        </div>
       </div>
     </div>
   )

@@ -25,12 +25,6 @@
       "createdAt": "2024-02-20T14:17:20.663Z"
     },
     {
-      "id": "アンチ",
-      "title": "アンチ",
-      "content": "アンチ",
-      "createdAt": "2024-02-20T14:19:40.711Z"
-    },
-    {
       "id": "ダニエル",
       "title": "React",
       "content": "ニート",
@@ -53,12 +47,6 @@
       "title": "",
       "content": "",
       "createdAt": "2024-02-20T14:28:45.228Z"
-    },
-    {
-      "id": "ee",
-      "title": "ee",
-      "content": "ee",
-      "createdAt": "2024-02-20T14:30:07.734Z"
     }
   ]
 }
