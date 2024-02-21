@@ -1,4 +1,5 @@
 import { getALLArticles } from "@/blogAPI ";
+import { supabase } from "@/utils/supabaseClient";
 import Image from "next/image";
 import ArticleList from "./components/ArticleList";
 
@@ -6,6 +7,9 @@ export default  async function Home()  {
   
   //APIから叩き出したデータ
    const articles = await  getALLArticles();
+
+
+   console.log(supabase)
 
 
 
