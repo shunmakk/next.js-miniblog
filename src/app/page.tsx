@@ -1,16 +1,29 @@
 import { getALLArticles } from "@/blogAPI ";
 import { supabase } from "@/utils/supabaseClient";
 import Image from "next/image";
+import { useEffect } from "react";
 import ArticleList from "./components/ArticleList";
 
 export default  async function Home()  {
   
   //APIから叩き出したデータ
-   const articles = await  getALLArticles();
+  //  const articles = await  getALLArticles();
+
+  const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
+  const res = await fetch(`${API_URL}/api` , { cache: "no-store" });
 
 
-   console.log(supabase)
+  // console.log('HTTP status code:', res.status);
+  // console.log(API_URL)
 
+  // const text = await res.text();
+  // console.log("Raw response", text)
+
+  const articles = await res.json();
+  // console.log(articles)
+
+  
 
 
   return (

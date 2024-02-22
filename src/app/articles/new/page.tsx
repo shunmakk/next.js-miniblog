@@ -13,23 +13,36 @@ const CreateBlogPage = () => {
     const [content,setContent] = useState<string>("");
     const [loading,setLoading] = useState<boolean>(false);
 
+    const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
    const handeleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 
      e.preventDefault();
 
      setLoading(true);
 
-     console.log(id,title,content)
+    //  console.log(id,title,content)
 
-     await  createArticle(id,title,content);
+    //  await  createArticle(id,title,content);
+ 
+
+
+    await fetch(`${API_URL}/api/create`,{
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({id,title,content})
+     }); 
+
 
      //リダイレクト
      router.push("/")
      router.refresh();
      
-     setLoading(false);
 
-   }
+
+   };
 
 
   return (
