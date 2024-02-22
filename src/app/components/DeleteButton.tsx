@@ -14,6 +14,8 @@ const DeleteButton = ({id}: DeleteButtonProps) => {
     const handleDelete = async () => {
         // await deleteArticle(id);
 
+        window.alert('本当に削除しますか?')
+
 
    const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
@@ -21,6 +23,8 @@ const DeleteButton = ({id}: DeleteButtonProps) => {
  await fetch(`${API_URL}/api/${id}` ,{
      method: 'DELETE',
  }); 
+
+
 
 
         router.push('/');

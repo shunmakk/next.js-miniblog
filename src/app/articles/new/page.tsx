@@ -51,14 +51,14 @@ const CreateBlogPage = () => {
 
         <form className='bg-state-200 p-6 rounded shadow-lg' onSubmit={handeleSubmit}>
             <div className='mb-4'>
-                <label className='text-gray-700 text-sm font-bold mb-2'>URL</label>
-                <input type="text" className='shadow border rounded w-full py-2 px-3 text-gray-700 reading-tight  focus:outline-none' 
+                <label className='tbext-gray-700 text-sm font-bold mb-2' htmlFor='url'>URL</label>
+                <input  id="url"   type="text" className='shadow border rounded w-full py-2 px-3 text-gray-700 reading-tight  focus:outline-none' 
                 onChange={(e) => setId(e.target.value)}
                 />
             </div>
             <div className='mb-4'>
-                <label className='text-gray-700 text-sm font-bold mb-2'>タイトル</label>
-                <input type="text" className='shadow border rounded w-full py-2 px-3 text-gray-700 reading-tight  focus:outline-none' 
+                <label className='text-gray-700 text-sm font-bold mb-2' htmlFor='title'>タイトル</label>
+                <input  id="title"   type="text" className='shadow border rounded w-full py-2 px-3 text-gray-700 reading-tight  focus:outline-none' 
                 onChange={(e) => setTitle(e.target.value)} />
             </div>
             <div className='mb-4'>
